@@ -8,17 +8,10 @@
 # 5. Add real time data from Yahoo
 # 6. Add plots
 
-# There's conflicting info on what Monte Carlo actually is.
-# From this https://www.wallstreetmojo.com/option-pricing-2/:
-# Monte Carlo is a method of calculating option prices by taking random
-# variables (unlike BS model that takes 5 give variables).
-# The Monte Carlo option model is the application of Monte Carlo Methods.
-# This pricing model uses random samples to calculate the price.
-# This method is more favorable than other methods like Black-Scholes
-# for calculating the value of options with multiple sources of uncertainty.
-
 import numpy
 from scipy.stats import norm
+
+
 
 # Sample values:
 # t = 1     # in years
@@ -62,11 +55,12 @@ apple_price_hist = [142.449997, 146.100006, 146.399994, 145.429993, 140.089996, 
                     177.229996, 181.119995, 176.380005, 178.610001, 180.190002, 184.119995, 187.649994, 187.869995,
                     189.460007, 189.699997, 182.910004, 177.559998, 178.179993, 179.360001, 176.300003, 174.210007,
                     175.740005, 175.009995, 177.970001, 179.070007, 175.490005, 173.929993, 174.789993, 176.080002,
-                    171.960007, 170.429993, 170.690002, 171.210007
+                    171.960007, 170.429993, 170.690002, 171.210007, 173.75, 172.40, 173.66, 175.01
                     ]
 
 apple_price_hist_2 = [177.970001, 179.070007, 175.490005, 173.929993, 174.789993,
-                      176.080002, 171.960007, 170.429993, 170.690002, 171.210007]
+                      176.080002, 171.960007, 170.429993, 170.690002, 171.210007,
+                      173.75, 172.40, 173.66, 175.01]
 
 
 def calc_volatility(stock_price_hist: list):
@@ -117,10 +111,10 @@ def calc_price_call(time_to_mat,underlying_price,strike_price,interest_rate,sigm
         (numpy.log(underlying_price/strike_price) +
         (interest_rate + (sigma**2)/2 )*time_to_mat)
     d2 = d1 - sigma*numpy.sqrt(time_to_mat)
-    print(f"d1 = {d1}")
-    print(f"d2 = {d2}")
-    print(f"N(d1) = {N(d1)}")
-    print(f"N(d2) = {N(d2)}")
+    # print(f"d1 = {d1}")
+    # print(f"d2 = {d2}")
+    # print(f"N(d1) = {N(d1)}")
+    # print(f"N(d2) = {N(d2)}")
     # Black-Scholes formula explanation:
     # Simplified:
     # price_call =  Return - Cost
@@ -130,9 +124,9 @@ def calc_price_call(time_to_mat,underlying_price,strike_price,interest_rate,sigm
     ret = N(d1) * underlying_price
     cost = N(d2) * strike_price * numpy.exp(-interest_rate * time_to_mat)
     price_call = ret - cost
-    print(f"return = {ret}")
-    print(f"cost = {cost}")
-    print(f"price_call = {price_call}")
+    # print(f"return = {ret}")
+    # print(f"cost = {cost}")
+    # print(f"price_call = {price_call}")
     return price_call
 
 
@@ -143,9 +137,69 @@ def calc_price_call(time_to_mat,underlying_price,strike_price,interest_rate,sigm
 
 # Sample values:
 t = 1     # in years
-S = 171.6   # Underlying price USD
-K = 190      # Strike price USD
+S = 174.9   # Underlying price USD
+K = 150     # Strike price USD
 r = 0.05
 sig = calc_volatility_log(apple_price_hist_2)
 
 print(calc_price_call(t,S,K,r,sig))
+
+for K in range(140,191,5):
+
+    print(f"K={K}, S={calc_price_call(t,S,K,r,sig)}")
+
+# There's conflicting info on what Monte Carlo actually is.
+# From this https://www.wallstreetmojo.com/option-pricing-2/:
+# Monte Carlo is a method of calculating option prices by taking random
+# variables (unlike BS model that takes 5 give variables).
+# The Monte Carlo option model is the application of Monte Carlo Methods.
+# This pricing model uses random samples to calculate the price.
+# This method is more favorable than other methods like Black-Scholes
+# for calculating the value of options with multiple sources of uncertainty.
+# From wikipedia: Since the underlying random process is the same,
+# for enough price paths, the value of a european option here should be
+# the same as under Black–Scholes.
+# http://www.goddardconsulting.ca/option-pricing-monte-carlo-index.html
+
+# Weiner process (Used by MC to simulate stock price evolution):
+# price_t   -> underlying price at time t
+# price_0 = 175   # underlying price now - in USD
+# mu = 0.05   # asset's historical return TODO: find a formula for this
+# volat = calc_volatility_log(apple_price_hist_2)     # expected volatility
+# dt = 1/252  # time step - in years
+# z = numpy.random.normal()   # a random number from a normal distribution
+# with a peak of 0, 1std distribution is +/- 1, etc.
+
+# price_t = price_0*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
+
+def calc_mc(price_0, mu, volat, steps, time_to_mat):
+    # Weiner process (Used by MC to simulate stock price evolution):
+    # price_t   -> underlying price at time t
+    # price_0   -> starting underlying price - in USD
+    # mu     -> asset's historical return TODO: find a formula for this
+    # volat     -> expected volatility
+    # steps    -> time step - in years
+    # z     -> a random number from a normal distribution
+    # with a peak of 0, 1std distribution is +/- 1, etc.
+
+    price_hist = []
+    z = numpy.random.normal()
+    dt = time_to_mat/steps
+    price_t = price_0*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
+    for i in range(steps):
+        price_hist.append(price_t)
+        price_t = price_t*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
+    return price_hist
+
+
+# Sample values:
+p0 = 175
+mu = 0.05
+sigma = calc_volatility_log(apple_price_hist_2)
+step = 252
+t = 1
+
+for i in range(10):
+    print(calc_mc(p0, mu, sigma, step, t))
+
+
