@@ -1,24 +1,5 @@
-# TODO:
-# 1. Use git
-# 1.5 Organize meeting with Jeremy?
-# 2. Add Monte Carlo simulation
-# 3. Clean up each in an object
-# 3.5 Organize meeting with Jeremy
-# 4. Add logs
-# 5. Add real time data from Yahoo
-# 6. Add plots
-
 import numpy
 from scipy.stats import norm
-
-
-
-# Sample values:
-# t = 1     # in years
-# S = 100      # USD
-# K = 100      # USD
-# r = 0.1
-# sig =
 
 # Sample price history
 price_hist = [150, 153.07, 154.94, 155.86, 156.82, 153.3, 159.92,
@@ -130,19 +111,12 @@ def calc_price_call(time_to_mat,underlying_price,strike_price,interest_rate,sigm
     return price_call
 
 
-# for i in range(1,20):
-#     sig = i/10
-#     call_price = calc_price_call(t,S,K,r,sig)
-#     print(f"sigma = {sig}, price_call = {call_price}")
-
 # Sample values:
 t = 1     # in years
 S = 174.9   # Underlying price USD
 K = 150     # Strike price USD
 r = 0.05
 sig = calc_volatility_log(apple_price_hist_2)
-
-print(calc_price_call(t,S,K,r,sig))
 
 for K in range(140,191,5):
 
@@ -192,7 +166,7 @@ def calc_mc(price_0, mu, volat, steps, time_to_mat):
     return price_hist
 
 
-# Sample values:
+# Sample values for MC:
 p0 = 175
 mu = 0.05
 sigma = calc_volatility_log(apple_price_hist_2)
