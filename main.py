@@ -114,7 +114,7 @@ def calc_price_call(time_to_mat,underlying_price,strike_price,interest_rate,sigm
 # Sample values:
 t = 1     # in years
 S = 174.9   # Underlying price USD
-K = 150     # Strike price USD
+K = 190     # Strike price USD
 r = 0.05
 sig = calc_volatility_log(apple_price_hist_2)
 
@@ -156,13 +156,14 @@ def calc_mc(price_0, mu, volat, steps, time_to_mat):
     # z     -> a random number from a normal distribution
     # with a peak of 0, 1std distribution is +/- 1, etc.
 
-    price_hist = []
     z = numpy.random.normal()
     dt = time_to_mat/steps
     price_t = price_0*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
+    price_hist = [price_t]
     for i in range(steps):
-        price_hist.append(price_t)
+        z = numpy.random.normal()
         price_t = price_t*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
+        price_hist.append(price_t)
     return price_hist
 
 
@@ -170,6 +171,7 @@ def calc_mc(price_0, mu, volat, steps, time_to_mat):
 p0 = 175
 mu = 0.05
 sigma = calc_volatility_log(apple_price_hist_2)
+print(calc_volatility_log(apple_price_hist_2))
 step = 252
 t = 1
 
