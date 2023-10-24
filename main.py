@@ -166,6 +166,7 @@ def calc_mc(price_0, mu, volat, steps, time_to_mat):
     # steps    -> time step - in years
     # z     -> a random number from a normal distribution
     # with a peak of 0, 1std distribution is +/- 1, etc.
+    # TODO: calculate only last value and move trajectory calc to another def (for creating a plot later)
 
     z = numpy.random.normal()
     dt = time_to_mat/steps
@@ -175,18 +176,35 @@ def calc_mc(price_0, mu, volat, steps, time_to_mat):
         z = numpy.random.normal()
         price_t = price_t*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
         price_hist.append(price_t)
-    return price_hist
+    return price_hist[-1]
 
 
 # Sample values for MC:
 p0 = 175
 mu = 0.05
 sigma = calc_volatility_log(apple_price_hist_2)
-print(calc_volatility_log(apple_price_hist_2))
 step = 252
 t = 1
 
-for i in range(10):
-    print(calc_mc(p0, mu, sigma, step, t))
+# Call option payoff is calculated as: Spot price - Strike price
+# Put option payoff is calculated as: Strike price - Spot price
+# Payoff cannot be negative.
 
 
+def option_price_mc(price_0, mu, volat, steps, time_to_mat, n: int, K):
+    """Calculate option price for given parameters
+    n - number of iterations for simulation to run"""
+
+    simulated_strike_prices = []
+    for i in range(n):
+        simulated_strike_prices.append(calc_mc(price_0, mu, volat, steps, time_to_mat))
+
+    simulated_strike_price = numpy.mean(simulated_strike_prices)
+
+    call_price = max(simulated_strike_price - K, 0)
+    put_price = max(K - simulated_strike_price, 0)
+
+    return call_price, put_price
+
+
+print(option_price_mc(p0, mu, sigma, step, t, 10, 150))
