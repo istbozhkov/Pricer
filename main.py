@@ -92,10 +92,6 @@ def calc_price_call(time_to_mat,underlying_price,strike_price,interest_rate,sigm
         (numpy.log(underlying_price/strike_price) +
         (interest_rate + (sigma**2)/2 )*time_to_mat)
     d2 = d1 - sigma*numpy.sqrt(time_to_mat)
-    # print(f"d1 = {d1}")
-    # print(f"d2 = {d2}")
-    # print(f"N(d1) = {N(d1)}")
-    # print(f"N(d2) = {N(d2)}")
     # Black-Scholes formula explanation:
     # Simplified:
     # price_call =  Return - Cost
@@ -111,6 +107,19 @@ def calc_price_call(time_to_mat,underlying_price,strike_price,interest_rate,sigm
     return price_call
 
 
+def calc_price_put(time_to_mat,underlying_price,strike_price,interest_rate,sigma):
+    N = norm.cdf    # Cumulative Distribution Function
+    d1 = ( 1 / (sigma*numpy.sqrt(time_to_mat)) ) * \
+         (numpy.log(underlying_price/strike_price) +
+          (interest_rate + (sigma**2)/2 )*time_to_mat)
+    d2 = d1 - sigma*numpy.sqrt(time_to_mat)
+    # The put option formula is derived from the
+    # "put-call parity" expression, which is outside the scope of this project
+    # The resulting formula is:
+    price_put = N(-d2) * strike_price * numpy.exp(-interest_rate * time_to_mat)\
+                - N(-d1) * underlying_price
+    return price_put
+
 # Sample values:
 t = 1     # in years
 S = 174.9   # Underlying price USD
@@ -120,7 +129,9 @@ sig = calc_volatility_log(apple_price_hist_2)
 
 for K in range(140,191,5):
 
-    print(f"K={K}, S={calc_price_call(t,S,K,r,sig)}")
+    print(f"K={K}, call: S={calc_price_call(t,S,K,r,sig)}, put: S={calc_price_put(t,S,K,r,sig)}")
+
+
 
 # There's conflicting info on what Monte Carlo actually is.
 # From this https://www.wallstreetmojo.com/option-pricing-2/:
