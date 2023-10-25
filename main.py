@@ -144,6 +144,11 @@ for K in range(140,191,5):
 # From wikipedia: Since the underlying random process is the same,
 # for enough price paths, the value of a european option here should be
 # the same as under Black–Scholes.
+# MC process:
+# 1. Simulate many stock price trajectories
+# 2. Average the stock price for each of the simulated paths.
+# 3. Calculate the payoff (option premium) for each simulated price.
+# 4. Average the payoffs for all paths.
 # http://www.goddardconsulting.ca/option-pricing-monte-carlo-index.html
 
 # Weiner process (Used by MC to simulate stock price evolution):
@@ -193,18 +198,25 @@ t = 1
 
 def option_price_mc(price_0, mu, volat, steps, time_to_mat, n: int, K):
     """Calculate option price for given parameters
-    n - number of iterations for simulation to run"""
+    n - number of iterations for simulation to run
+    Simulate n trajectories and calculate payoff for each.
+    Return averaged payoff"""
 
     simulated_strike_prices = []
+    simulated_call_payoffs = []
+    simulated_put_payoffs = []
+
     for i in range(n):
-        simulated_strike_prices.append(calc_mc(price_0, mu, volat, steps, time_to_mat))
+        simulated_strike_price = calc_mc(price_0, mu, volat, steps, time_to_mat)
+        simulated_strike_prices.append(simulated_strike_price)
+        # Currently not used. Keeping for future use for plots
 
-    simulated_strike_price = numpy.mean(simulated_strike_prices)
+        simulated_call_payoffs.append(max(simulated_strike_price - K, 0))
+        simulated_put_payoffs.append(max(K - simulated_strike_price, 0))
 
-    call_price = max(simulated_strike_price - K, 0)
-    put_price = max(K - simulated_strike_price, 0)
-
+    call_price = numpy.mean(simulated_call_payoffs)
+    put_price = numpy.mean(simulated_put_payoffs)
     return call_price, put_price
 
 
-print(option_price_mc(p0, mu, sigma, step, t, 10, 150))
+print(option_price_mc(p0, mu, sigma, step, t, 20, 180))
