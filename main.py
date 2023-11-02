@@ -1,5 +1,8 @@
 import numpy
+import logging
 from scipy.stats import norm
+
+logging.basicConfig(filename='default.log', encoding='utf-8', level=logging.DEBUG)
 
 # Sample price history
 price_hist = [150, 153.07, 154.94, 155.86, 156.82, 153.3, 159.92,
@@ -51,13 +54,13 @@ def calc_volatility(stock_price_hist: list):
     # different than the one calculated by numpy.std() - e.g.
     # their mean is 162.23, although it's actually 162.5036
     # This measure seems to give higher volatility than expected
+    logging.debug('Initiating calculation of volatility - method 1')
     mean = numpy.mean(stock_price_hist)
     daily_volat = numpy.std(stock_price_hist)
-    print(f"daily volatility: {daily_volat}")
     annualized_volat = numpy.sqrt(252)*daily_volat  # 252 is no. of trading days in a year
     an_volat_percent = 100 * annualized_volat / mean
     # Need to divide by the mean because annualized_volat is in absolute terms
-
+    logging.info(f'Calculated annualized volatility (1) = {annualized_volat}')
     return an_volat_percent
 
 
@@ -66,7 +69,7 @@ def calc_volatility_log(stock_price_hist: list):
     # Log returns are a way of measuring the percentage change over time
     # https://www.macroption.com/historical-volatility-calculation/
     # Compared to online volatility data, this method seems more accurate
-
+    logging.debug('Initiating calculation of volatility')
     log_returns = [numpy.log(stock_price_hist[i] / stock_price_hist[i - 1])
                    for i in range(1, len(stock_price_hist))]
 
@@ -77,7 +80,7 @@ def calc_volatility_log(stock_price_hist: list):
     an_volat_percent = 100 * annualized_volat
     # No need to divide by the mean because annualized_volat is already
     # calculated as a ratio from the log_returns formula
-
+    logging.info(f'Calculated annualized volatility (1) = {annualized_volat}')
     return annualized_volat
 
 
