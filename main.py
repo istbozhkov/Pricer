@@ -182,7 +182,9 @@ def calc_mc(price_0, mu, volat, steps, time_to_mat):
     # z     -> a random number from a normal distribution
     # with a peak of 0, 1std distribution is +/- 1, etc.
     # TODO: calculate only last value and move trajectory calc to another def (for creating a plot later)
-
+    logging.info(f'Initiating stock price simulation using the Monte Carlo model, with the following parameters: \
+Time to maturity = {time_to_mat}, Underlying price at start = {price_0}, \
+Asset\'s historical return = {mu}, Volatility = {volat}')
     z = numpy.random.normal()
     dt = time_to_mat/steps
     price_t = price_0*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
@@ -191,6 +193,7 @@ def calc_mc(price_0, mu, volat, steps, time_to_mat):
         z = numpy.random.normal()
         price_t = price_t*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
         price_hist.append(price_t)
+    logging.info(f'Calculated stock price after {time_to_mat} years: {price_hist[-1]}')
     return price_hist[-1]
 
 
@@ -211,7 +214,7 @@ def option_price_mc(price_0, mu, volat, steps, time_to_mat, n: int, K):
     n - number of iterations for simulation to run
     Simulate n trajectories and calculate payoff for each.
     Return averaged payoff"""
-
+    logging.debug(f'Starting Option price calculation from MC simulated prices with {n} simulations')
     simulated_strike_prices = []
     simulated_call_payoffs = []
     simulated_put_payoffs = []
@@ -226,7 +229,8 @@ def option_price_mc(price_0, mu, volat, steps, time_to_mat, n: int, K):
 
     call_price = numpy.mean(simulated_call_payoffs)
     put_price = numpy.mean(simulated_put_payoffs)
+    logging.info(f'Calculated option prices using MC method: Call = {call_price}, Put = {put_price}')
     return call_price, put_price
 
 
-print(option_price_mc(p0, mu, sigma, step, t, 20, 180))
+print(option_price_mc(p0, mu, sigma, step, t, 100, 180))
