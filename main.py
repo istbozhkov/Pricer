@@ -130,6 +130,7 @@ Interest rate = {interest_rate}, Volatility = {sigma}')
     logging.info(f'B-S calculated Call option price = {price_put}')
     return price_put
 
+
 # Sample values:
 t = 1     # in years
 S = 174.9   # Underlying price USD
@@ -140,7 +141,6 @@ sig = calc_volatility_log(apple_price_hist_2)
 for K in range(140,191,5):
 
     print(f"K={K}, call: S={calc_price_call(t,S,K,r,sig)}, put: S={calc_price_put(t,S,K,r,sig)}")
-
 
 
 # There's conflicting info on what Monte Carlo actually is.
@@ -172,6 +172,7 @@ for K in range(140,191,5):
 
 # price_t = price_0*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
 
+
 def calc_mc(price_0, mu, volat, steps, time_to_mat):
     # Weiner process (Used by MC to simulate stock price evolution):
     # price_t   -> underlying price at time t
@@ -185,12 +186,15 @@ def calc_mc(price_0, mu, volat, steps, time_to_mat):
     logging.info(f'Initiating stock price simulation using the Monte Carlo model, with the following parameters: \
 Time to maturity = {time_to_mat}, Underlying price at start = {price_0}, \
 Asset\'s historical return = {mu}, Volatility = {volat}')
-    z = numpy.random.normal()
+    # pre-calculating all z values in the following array
+    # simple testing showed reduction of ~10% in processing time compared to
+    # calculating z value every iteration.
+    z_array = numpy.random.normal(size=steps)
     dt = time_to_mat/steps
-    price_t = price_0*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
+    price_t = price_0*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z_array[0]))
     price_hist = [price_t]
     for i in range(steps):
-        z = numpy.random.normal()
+        z = z_array[i]
         price_t = price_t*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
         price_hist.append(price_t)
     logging.info(f'Calculated stock price after {time_to_mat} years: {price_hist[-1]}')
@@ -215,17 +219,18 @@ def option_price_mc(price_0, mu, volat, steps, time_to_mat, n: int, K):
     Simulate n trajectories and calculate payoff for each.
     Return averaged payoff"""
     logging.debug(f'Starting Option price calculation from MC simulated prices with {n} simulations')
-    simulated_strike_prices = []
-    simulated_call_payoffs = []
-    simulated_put_payoffs = []
+    # Initializing empty numpy arrays:
+    simulated_strike_prices = numpy.empty(n)
+    simulated_call_payoffs = numpy.empty(n)
+    simulated_put_payoffs = numpy.empty(n)
 
     for i in range(n):
         simulated_strike_price = calc_mc(price_0, mu, volat, steps, time_to_mat)
-        simulated_strike_prices.append(simulated_strike_price)
+        simulated_strike_prices[i] = simulated_strike_price
         # Currently not used. Keeping for future use for plots
-
-        simulated_call_payoffs.append(max(simulated_strike_price - K, 0))
-        simulated_put_payoffs.append(max(K - simulated_strike_price, 0))
+        # print(simulated_strike_prices)
+        simulated_call_payoffs[i] = max(simulated_strike_price - K, 0)
+        simulated_put_payoffs[i] = max(K - simulated_strike_price, 0)
 
     call_price = numpy.mean(simulated_call_payoffs)
     put_price = numpy.mean(simulated_put_payoffs)
