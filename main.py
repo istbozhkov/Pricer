@@ -2,7 +2,7 @@ import numpy
 import logging
 from scipy.stats import norm
 
-logging.basicConfig(filename='default.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', filename='default.log', encoding='utf-8', level=logging.DEBUG)
 
 # Sample price history
 price_hist = [150, 153.07, 154.94, 155.86, 156.82, 153.3, 159.92,
@@ -90,11 +90,15 @@ def calc_volatility_log(stock_price_hist: list):
 
 
 def calc_price_call(time_to_mat,underlying_price,strike_price,interest_rate,sigma):
+    logging.info(f'Initiating calculation of Call option price using B-S method, with the following parameters: \
+Time to maturity = {time_to_mat}, Underlying price = {underlying_price}, Strike price = {strike_price}, \
+Interest rate = {interest_rate}, Volatility = {sigma}')
     N = norm.cdf    # Cumulative Distribution Function
     d1 = ( 1 / (sigma*numpy.sqrt(time_to_mat)) ) * \
         (numpy.log(underlying_price/strike_price) +
         (interest_rate + (sigma**2)/2 )*time_to_mat)
     d2 = d1 - sigma*numpy.sqrt(time_to_mat)
+    logging.debug(f'B-S calculated values: d1={d1}, d2={d2}')
     # Black-Scholes formula explanation:
     # Simplified:
     # price_call =  Return - Cost
@@ -104,23 +108,26 @@ def calc_price_call(time_to_mat,underlying_price,strike_price,interest_rate,sigm
     ret = N(d1) * underlying_price
     cost = N(d2) * strike_price * numpy.exp(-interest_rate * time_to_mat)
     price_call = ret - cost
-    # print(f"return = {ret}")
-    # print(f"cost = {cost}")
-    # print(f"price_call = {price_call}")
+    logging.info(f'B-S calculated Call option price = {price_call}')
     return price_call
 
 
 def calc_price_put(time_to_mat,underlying_price,strike_price,interest_rate,sigma):
+    logging.info(f'Initiating calculation of Put option price using B-S method, with the following parameters: \
+Time to maturity = {time_to_mat}, Underlying price = {underlying_price}, Strike price = {strike_price}, \
+Interest rate = {interest_rate}, Volatility = {sigma}')
     N = norm.cdf    # Cumulative Distribution Function
     d1 = ( 1 / (sigma*numpy.sqrt(time_to_mat)) ) * \
          (numpy.log(underlying_price/strike_price) +
           (interest_rate + (sigma**2)/2 )*time_to_mat)
     d2 = d1 - sigma*numpy.sqrt(time_to_mat)
+    logging.debug(f'B-S calculated values: d1={d1}, d2={d2}')
     # The put option formula is derived from the
     # "put-call parity" expression, which is outside the scope of this project
     # The resulting formula is:
     price_put = N(-d2) * strike_price * numpy.exp(-interest_rate * time_to_mat)\
                 - N(-d1) * underlying_price
+    logging.info(f'B-S calculated Call option price = {price_put}')
     return price_put
 
 # Sample values:
