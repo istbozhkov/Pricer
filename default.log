@@ -2558,3 +2558,547 @@
 2023-11-05 13:55:53,145 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
 2023-11-05 13:55:53,146 INFO: Calculated stock price after 1 years: 225.3729262189714
 2023-11-05 13:55:53,146 INFO: Calculated option prices using MC method: Call = 26.326108526049055, Put = 17.514752038619314
+2023-11-07 19:30:42,038 DEBUG: Initiating calculation of volatility
+2023-11-07 19:30:42,039 INFO: Calculated annualized volatility (1) = 0.27114977420156783
+2023-11-07 19:30:42,039 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 140, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,039 DEBUG: B-S calculated values: d1=1.1408199042425908, d2=0.869670130041023
+2023-11-07 19:30:42,040 INFO: B-S calculated Call option price = 45.12145604664721
+2023-11-07 19:30:42,040 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 140, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,040 DEBUG: B-S calculated values: d1=1.1408199042425908, d2=0.869670130041023
+2023-11-07 19:30:42,040 INFO: B-S calculated Call option price = 3.3935754767471416
+2023-11-07 19:30:42,040 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 145, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,040 DEBUG: B-S calculated values: d1=1.0114031643076207, d2=0.7402533901060528
+2023-11-07 19:30:42,040 INFO: B-S calculated Call option price = 41.367391399275846
+2023-11-07 19:30:42,040 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 145, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,040 DEBUG: B-S calculated values: d1=1.0114031643076207, d2=0.7402533901060528
+2023-11-07 19:30:42,041 INFO: B-S calculated Call option price = 4.395657951879368
+2023-11-07 19:30:42,041 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 150, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,041 DEBUG: B-S calculated values: d1=0.8863742876452364, d2=0.6152245134436686
+2023-11-07 19:30:42,041 INFO: B-S calculated Call option price = 37.79657360961478
+2023-11-07 19:30:42,041 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 150, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,041 DEBUG: B-S calculated values: d1=0.8863742876452364, d2=0.6152245134436686
+2023-11-07 19:30:42,041 INFO: B-S calculated Call option price = 5.5809872847219
+2023-11-07 19:30:42,042 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 155, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,042 DEBUG: B-S calculated values: d1=0.7654454654858065, d2=0.49429569128423867
+2023-11-07 19:30:42,042 INFO: B-S calculated Call option price = 34.41855788322347
+2023-11-07 19:30:42,042 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 155, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,042 DEBUG: B-S calculated values: d1=0.7654454654858065, d2=0.49429569128423867
+2023-11-07 19:30:42,042 INFO: B-S calculated Call option price = 6.959118680834123
+2023-11-07 19:30:42,042 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 160, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,042 DEBUG: B-S calculated values: d1=0.6483563091032575, d2=0.37720653490168965
+2023-11-07 19:30:42,043 INFO: B-S calculated Call option price = 31.240078451494938
+2023-11-07 19:30:42,043 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 160, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,043 DEBUG: B-S calculated values: d1=0.6483563091032575, d2=0.37720653490168965
+2023-11-07 19:30:42,043 INFO: B-S calculated Call option price = 8.536786371609175
+2023-11-07 19:30:42,043 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 165, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,043 DEBUG: B-S calculated values: d1=0.5348704736185536, d2=0.2637206994169857
+2023-11-07 19:30:42,043 INFO: B-S calculated Call option price = 28.265031611840485
+2023-11-07 19:30:42,044 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 165, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,044 DEBUG: B-S calculated values: d1=0.5348704736185536, d2=0.2637206994169857
+2023-11-07 19:30:42,044 INFO: B-S calculated Call option price = 10.317886654458292
+2023-11-07 19:30:42,044 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 170, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,044 DEBUG: B-S calculated values: d1=0.4247727859564976, d2=0.15362301175492976
+2023-11-07 19:30:42,044 INFO: B-S calculated Call option price = 25.494576918837097
+2023-11-07 19:30:42,044 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 170, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,044 DEBUG: B-S calculated values: d1=0.4247727859564976, d2=0.15362301175492976
+2023-11-07 19:30:42,046 INFO: B-S calculated Call option price = 12.303579083958496
+2023-11-07 19:30:42,046 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 175, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,046 DEBUG: B-S calculated values: d1=0.31786678922974587, d2=0.046717015028178044
+2023-11-07 19:30:42,046 INFO: B-S calculated Call option price = 22.927332753060924
+2023-11-07 19:30:42,046 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 175, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,046 DEBUG: B-S calculated values: d1=0.31786678922974587, d2=0.046717015028178044
+2023-11-07 19:30:42,046 INFO: B-S calculated Call option price = 14.492482040685871
+2023-11-07 19:30:42,047 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 180, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,047 DEBUG: B-S calculated values: d1=0.21397263313225784, d2=-0.05717714106930999
+2023-11-07 19:30:42,047 INFO: B-S calculated Call option price = 20.559640997883463
+2023-11-07 19:30:42,047 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 180, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,047 DEBUG: B-S calculated values: d1=0.21397263313225784, d2=-0.05717714106930999
+2023-11-07 19:30:42,047 INFO: B-S calculated Call option price = 16.88093740801196
+2023-11-07 19:30:42,047 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 185, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,047 DEBUG: B-S calculated values: d1=0.11292525343668577, d2=-0.15822452076488205
+2023-11-07 19:30:42,048 INFO: B-S calculated Call option price = 18.38587636056623
+2023-11-07 19:30:42,048 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 185, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,048 DEBUG: B-S calculated values: d1=0.11292525343668577, d2=-0.15822452076488205
+2023-11-07 19:30:42,048 INFO: B-S calculated Call option price = 19.463319893198317
+2023-11-07 19:30:42,048 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 190, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,048 DEBUG: B-S calculated values: d1=0.014572794318145019, d2=-0.2565769798834228
+2023-11-07 19:30:42,048 INFO: B-S calculated Call option price = 16.398778285685196
+2023-11-07 19:30:42,048 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 190, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,048 DEBUG: B-S calculated values: d1=0.014572794318145019, d2=-0.2565769798834228
+2023-11-07 19:30:42,048 INFO: B-S calculated Call option price = 22.232368940820834
+2023-11-07 19:30:42,048 DEBUG: Initiating calculation of volatility
+2023-11-07 19:30:42,049 INFO: Calculated annualized volatility (1) = 0.27114977420156783
+2023-11-07 19:30:42,049 DEBUG: Starting Option price calculation from MC simulated prices with 100 simulations
+2023-11-07 19:30:42,049 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,050 INFO: Calculated stock price after 1 years: 159.31535818223335
+2023-11-07 19:30:42,050 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,050 INFO: Calculated stock price after 1 years: 156.00798484017392
+2023-11-07 19:30:42,050 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,051 INFO: Calculated stock price after 1 years: 194.53637029609038
+2023-11-07 19:30:42,051 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,052 INFO: Calculated stock price after 1 years: 172.37200810936952
+2023-11-07 19:30:42,052 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,052 INFO: Calculated stock price after 1 years: 181.59549073770057
+2023-11-07 19:30:42,052 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,053 INFO: Calculated stock price after 1 years: 209.67228573612908
+2023-11-07 19:30:42,053 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,054 INFO: Calculated stock price after 1 years: 307.5098998135012
+2023-11-07 19:30:42,054 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,054 INFO: Calculated stock price after 1 years: 149.07132565913278
+2023-11-07 19:30:42,055 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,055 INFO: Calculated stock price after 1 years: 152.19603325462575
+2023-11-07 19:30:42,055 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,056 INFO: Calculated stock price after 1 years: 198.37728477228939
+2023-11-07 19:30:42,056 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,057 INFO: Calculated stock price after 1 years: 135.15544948210461
+2023-11-07 19:30:42,057 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,057 INFO: Calculated stock price after 1 years: 167.94314296182344
+2023-11-07 19:30:42,057 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,058 INFO: Calculated stock price after 1 years: 206.52245163548633
+2023-11-07 19:30:42,058 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,059 INFO: Calculated stock price after 1 years: 214.8503378624264
+2023-11-07 19:30:42,059 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,060 INFO: Calculated stock price after 1 years: 200.38620539409084
+2023-11-07 19:30:42,060 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,060 INFO: Calculated stock price after 1 years: 199.09162468350124
+2023-11-07 19:30:42,060 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,061 INFO: Calculated stock price after 1 years: 201.84800910734876
+2023-11-07 19:30:42,061 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,062 INFO: Calculated stock price after 1 years: 162.17023211247212
+2023-11-07 19:30:42,062 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,062 INFO: Calculated stock price after 1 years: 107.83714964343908
+2023-11-07 19:30:42,062 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,063 INFO: Calculated stock price after 1 years: 278.22939379033414
+2023-11-07 19:30:42,063 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,064 INFO: Calculated stock price after 1 years: 179.8381034180816
+2023-11-07 19:30:42,064 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,065 INFO: Calculated stock price after 1 years: 154.30465132090663
+2023-11-07 19:30:42,065 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,065 INFO: Calculated stock price after 1 years: 182.9715739353086
+2023-11-07 19:30:42,065 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,066 INFO: Calculated stock price after 1 years: 144.11047945577698
+2023-11-07 19:30:42,066 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,067 INFO: Calculated stock price after 1 years: 149.46872072290665
+2023-11-07 19:30:42,067 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,067 INFO: Calculated stock price after 1 years: 177.68154369936423
+2023-11-07 19:30:42,067 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,068 INFO: Calculated stock price after 1 years: 177.74117265960822
+2023-11-07 19:30:42,068 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,069 INFO: Calculated stock price after 1 years: 206.6888512233493
+2023-11-07 19:30:42,069 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,070 INFO: Calculated stock price after 1 years: 152.14334133875914
+2023-11-07 19:30:42,070 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,070 INFO: Calculated stock price after 1 years: 289.36132776982737
+2023-11-07 19:30:42,070 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,071 INFO: Calculated stock price after 1 years: 303.2480001433465
+2023-11-07 19:30:42,071 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,073 INFO: Calculated stock price after 1 years: 268.64167800797185
+2023-11-07 19:30:42,073 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,074 INFO: Calculated stock price after 1 years: 117.163818684258
+2023-11-07 19:30:42,074 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,074 INFO: Calculated stock price after 1 years: 231.4481889775922
+2023-11-07 19:30:42,074 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,076 INFO: Calculated stock price after 1 years: 167.09058190977854
+2023-11-07 19:30:42,076 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,077 INFO: Calculated stock price after 1 years: 157.05611861626525
+2023-11-07 19:30:42,077 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,078 INFO: Calculated stock price after 1 years: 124.22305336201534
+2023-11-07 19:30:42,078 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,079 INFO: Calculated stock price after 1 years: 268.5957433337762
+2023-11-07 19:30:42,079 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,080 INFO: Calculated stock price after 1 years: 106.64707909828064
+2023-11-07 19:30:42,080 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,081 INFO: Calculated stock price after 1 years: 179.539488206279
+2023-11-07 19:30:42,081 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,082 INFO: Calculated stock price after 1 years: 125.09319186240464
+2023-11-07 19:30:42,082 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,082 INFO: Calculated stock price after 1 years: 273.7282165026414
+2023-11-07 19:30:42,083 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,084 INFO: Calculated stock price after 1 years: 201.43255841611727
+2023-11-07 19:30:42,084 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,085 INFO: Calculated stock price after 1 years: 178.62998079881532
+2023-11-07 19:30:42,085 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,086 INFO: Calculated stock price after 1 years: 194.87245830703995
+2023-11-07 19:30:42,086 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,086 INFO: Calculated stock price after 1 years: 148.83315577839835
+2023-11-07 19:30:42,086 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,087 INFO: Calculated stock price after 1 years: 188.18885871655834
+2023-11-07 19:30:42,087 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,088 INFO: Calculated stock price after 1 years: 340.16138918324657
+2023-11-07 19:30:42,089 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,089 INFO: Calculated stock price after 1 years: 164.69866302527916
+2023-11-07 19:30:42,089 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,090 INFO: Calculated stock price after 1 years: 191.72281838558035
+2023-11-07 19:30:42,090 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,091 INFO: Calculated stock price after 1 years: 117.64639915755293
+2023-11-07 19:30:42,091 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,092 INFO: Calculated stock price after 1 years: 189.77072363143117
+2023-11-07 19:30:42,092 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,092 INFO: Calculated stock price after 1 years: 211.23624172635996
+2023-11-07 19:30:42,092 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,093 INFO: Calculated stock price after 1 years: 141.80598564475682
+2023-11-07 19:30:42,093 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,094 INFO: Calculated stock price after 1 years: 186.82084411886865
+2023-11-07 19:30:42,094 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,095 INFO: Calculated stock price after 1 years: 190.83263466868507
+2023-11-07 19:30:42,095 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,095 INFO: Calculated stock price after 1 years: 186.8336291447266
+2023-11-07 19:30:42,095 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,096 INFO: Calculated stock price after 1 years: 296.3159280664898
+2023-11-07 19:30:42,096 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,097 INFO: Calculated stock price after 1 years: 246.31208323901012
+2023-11-07 19:30:42,097 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,098 INFO: Calculated stock price after 1 years: 126.3823753220957
+2023-11-07 19:30:42,098 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,098 INFO: Calculated stock price after 1 years: 288.66544478991324
+2023-11-07 19:30:42,098 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,099 INFO: Calculated stock price after 1 years: 239.8190274126357
+2023-11-07 19:30:42,099 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,100 INFO: Calculated stock price after 1 years: 404.42581030651655
+2023-11-07 19:30:42,100 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,100 INFO: Calculated stock price after 1 years: 234.2300632365833
+2023-11-07 19:30:42,100 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,101 INFO: Calculated stock price after 1 years: 82.66974258119077
+2023-11-07 19:30:42,101 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,102 INFO: Calculated stock price after 1 years: 210.97054639863316
+2023-11-07 19:30:42,102 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,102 INFO: Calculated stock price after 1 years: 192.42562315148552
+2023-11-07 19:30:42,102 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,103 INFO: Calculated stock price after 1 years: 191.36865941964612
+2023-11-07 19:30:42,103 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,104 INFO: Calculated stock price after 1 years: 182.97411409580846
+2023-11-07 19:30:42,104 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,104 INFO: Calculated stock price after 1 years: 142.16231944605568
+2023-11-07 19:30:42,105 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,105 INFO: Calculated stock price after 1 years: 179.11608344787527
+2023-11-07 19:30:42,105 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,106 INFO: Calculated stock price after 1 years: 188.82466136718742
+2023-11-07 19:30:42,106 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,107 INFO: Calculated stock price after 1 years: 148.6300893020089
+2023-11-07 19:30:42,107 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,107 INFO: Calculated stock price after 1 years: 116.4060695184831
+2023-11-07 19:30:42,108 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,108 INFO: Calculated stock price after 1 years: 183.15767678399175
+2023-11-07 19:30:42,108 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,109 INFO: Calculated stock price after 1 years: 185.27379823250894
+2023-11-07 19:30:42,109 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,110 INFO: Calculated stock price after 1 years: 297.7689715474713
+2023-11-07 19:30:42,110 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,110 INFO: Calculated stock price after 1 years: 221.0118521120251
+2023-11-07 19:30:42,110 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,111 INFO: Calculated stock price after 1 years: 162.03296295886142
+2023-11-07 19:30:42,111 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,112 INFO: Calculated stock price after 1 years: 247.6340164625927
+2023-11-07 19:30:42,112 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,113 INFO: Calculated stock price after 1 years: 149.9143045781414
+2023-11-07 19:30:42,113 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,113 INFO: Calculated stock price after 1 years: 219.7580248396467
+2023-11-07 19:30:42,113 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,114 INFO: Calculated stock price after 1 years: 209.1149386419011
+2023-11-07 19:30:42,114 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,115 INFO: Calculated stock price after 1 years: 222.91822868531554
+2023-11-07 19:30:42,115 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,115 INFO: Calculated stock price after 1 years: 176.36455005583036
+2023-11-07 19:30:42,115 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,116 INFO: Calculated stock price after 1 years: 285.08810494702635
+2023-11-07 19:30:42,116 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,117 INFO: Calculated stock price after 1 years: 187.20505924364218
+2023-11-07 19:30:42,117 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,117 INFO: Calculated stock price after 1 years: 186.56476706584604
+2023-11-07 19:30:42,118 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,118 INFO: Calculated stock price after 1 years: 148.99416328681332
+2023-11-07 19:30:42,118 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,119 INFO: Calculated stock price after 1 years: 160.2563481421392
+2023-11-07 19:30:42,119 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,120 INFO: Calculated stock price after 1 years: 181.71833901684045
+2023-11-07 19:30:42,120 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,120 INFO: Calculated stock price after 1 years: 139.43630375801803
+2023-11-07 19:30:42,120 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,121 INFO: Calculated stock price after 1 years: 186.41452360763859
+2023-11-07 19:30:42,121 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,122 INFO: Calculated stock price after 1 years: 260.5748161138511
+2023-11-07 19:30:42,122 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,122 INFO: Calculated stock price after 1 years: 221.39147482348096
+2023-11-07 19:30:42,123 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,124 INFO: Calculated stock price after 1 years: 156.83294501914958
+2023-11-07 19:30:42,124 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,124 INFO: Calculated stock price after 1 years: 179.895196269679
+2023-11-07 19:30:42,124 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,125 INFO: Calculated stock price after 1 years: 181.75659610775978
+2023-11-07 19:30:42,125 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,126 INFO: Calculated stock price after 1 years: 138.69677569211564
+2023-11-07 19:30:42,126 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:42,127 INFO: Calculated stock price after 1 years: 235.22120695059724
+2023-11-07 19:30:42,127 INFO: Calculated option prices using MC method: Call = 26.280794466873708, Put = 13.064255576166806
+2023-11-07 19:30:47,357 DEBUG: Initiating calculation of volatility
+2023-11-07 19:30:47,358 INFO: Calculated annualized volatility (1) = 0.27114977420156783
+2023-11-07 19:30:47,358 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 140, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,358 DEBUG: B-S calculated values: d1=1.1408199042425908, d2=0.869670130041023
+2023-11-07 19:30:47,358 INFO: B-S calculated Call option price = 45.12145604664721
+2023-11-07 19:30:47,358 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 140, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,358 DEBUG: B-S calculated values: d1=1.1408199042425908, d2=0.869670130041023
+2023-11-07 19:30:47,359 INFO: B-S calculated Call option price = 3.3935754767471416
+2023-11-07 19:30:47,359 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 145, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,359 DEBUG: B-S calculated values: d1=1.0114031643076207, d2=0.7402533901060528
+2023-11-07 19:30:47,359 INFO: B-S calculated Call option price = 41.367391399275846
+2023-11-07 19:30:47,359 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 145, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,359 DEBUG: B-S calculated values: d1=1.0114031643076207, d2=0.7402533901060528
+2023-11-07 19:30:47,360 INFO: B-S calculated Call option price = 4.395657951879368
+2023-11-07 19:30:47,360 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 150, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,360 DEBUG: B-S calculated values: d1=0.8863742876452364, d2=0.6152245134436686
+2023-11-07 19:30:47,360 INFO: B-S calculated Call option price = 37.79657360961478
+2023-11-07 19:30:47,360 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 150, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,360 DEBUG: B-S calculated values: d1=0.8863742876452364, d2=0.6152245134436686
+2023-11-07 19:30:47,361 INFO: B-S calculated Call option price = 5.5809872847219
+2023-11-07 19:30:47,361 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 155, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,361 DEBUG: B-S calculated values: d1=0.7654454654858065, d2=0.49429569128423867
+2023-11-07 19:30:47,361 INFO: B-S calculated Call option price = 34.41855788322347
+2023-11-07 19:30:47,361 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 155, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,361 DEBUG: B-S calculated values: d1=0.7654454654858065, d2=0.49429569128423867
+2023-11-07 19:30:47,361 INFO: B-S calculated Call option price = 6.959118680834123
+2023-11-07 19:30:47,362 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 160, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,362 DEBUG: B-S calculated values: d1=0.6483563091032575, d2=0.37720653490168965
+2023-11-07 19:30:47,362 INFO: B-S calculated Call option price = 31.240078451494938
+2023-11-07 19:30:47,362 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 160, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,362 DEBUG: B-S calculated values: d1=0.6483563091032575, d2=0.37720653490168965
+2023-11-07 19:30:47,362 INFO: B-S calculated Call option price = 8.536786371609175
+2023-11-07 19:30:47,362 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 165, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,362 DEBUG: B-S calculated values: d1=0.5348704736185536, d2=0.2637206994169857
+2023-11-07 19:30:47,363 INFO: B-S calculated Call option price = 28.265031611840485
+2023-11-07 19:30:47,363 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 165, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,363 DEBUG: B-S calculated values: d1=0.5348704736185536, d2=0.2637206994169857
+2023-11-07 19:30:47,363 INFO: B-S calculated Call option price = 10.317886654458292
+2023-11-07 19:30:47,363 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 170, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,363 DEBUG: B-S calculated values: d1=0.4247727859564976, d2=0.15362301175492976
+2023-11-07 19:30:47,363 INFO: B-S calculated Call option price = 25.494576918837097
+2023-11-07 19:30:47,363 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 170, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,363 DEBUG: B-S calculated values: d1=0.4247727859564976, d2=0.15362301175492976
+2023-11-07 19:30:47,364 INFO: B-S calculated Call option price = 12.303579083958496
+2023-11-07 19:30:47,364 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 175, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,364 DEBUG: B-S calculated values: d1=0.31786678922974587, d2=0.046717015028178044
+2023-11-07 19:30:47,364 INFO: B-S calculated Call option price = 22.927332753060924
+2023-11-07 19:30:47,364 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 175, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,364 DEBUG: B-S calculated values: d1=0.31786678922974587, d2=0.046717015028178044
+2023-11-07 19:30:47,364 INFO: B-S calculated Call option price = 14.492482040685871
+2023-11-07 19:30:47,365 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 180, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,365 DEBUG: B-S calculated values: d1=0.21397263313225784, d2=-0.05717714106930999
+2023-11-07 19:30:47,365 INFO: B-S calculated Call option price = 20.559640997883463
+2023-11-07 19:30:47,365 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 180, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,365 DEBUG: B-S calculated values: d1=0.21397263313225784, d2=-0.05717714106930999
+2023-11-07 19:30:47,365 INFO: B-S calculated Call option price = 16.88093740801196
+2023-11-07 19:30:47,365 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 185, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,365 DEBUG: B-S calculated values: d1=0.11292525343668577, d2=-0.15822452076488205
+2023-11-07 19:30:47,366 INFO: B-S calculated Call option price = 18.38587636056623
+2023-11-07 19:30:47,366 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 185, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,366 DEBUG: B-S calculated values: d1=0.11292525343668577, d2=-0.15822452076488205
+2023-11-07 19:30:47,366 INFO: B-S calculated Call option price = 19.463319893198317
+2023-11-07 19:30:47,366 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 190, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,366 DEBUG: B-S calculated values: d1=0.014572794318145019, d2=-0.2565769798834228
+2023-11-07 19:30:47,366 INFO: B-S calculated Call option price = 16.398778285685196
+2023-11-07 19:30:47,366 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 190, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,366 DEBUG: B-S calculated values: d1=0.014572794318145019, d2=-0.2565769798834228
+2023-11-07 19:30:47,367 INFO: B-S calculated Call option price = 22.232368940820834
+2023-11-07 19:30:47,367 DEBUG: Initiating calculation of volatility
+2023-11-07 19:30:47,367 INFO: Calculated annualized volatility (1) = 0.27114977420156783
+2023-11-07 19:30:47,367 DEBUG: Starting Option price calculation from MC simulated prices with 100 simulations
+2023-11-07 19:30:47,367 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,368 INFO: Calculated stock price after 1 years: 210.9525282520931
+2023-11-07 19:30:47,368 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,369 INFO: Calculated stock price after 1 years: 170.6148171089269
+2023-11-07 19:30:47,369 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,369 INFO: Calculated stock price after 1 years: 146.15282126222533
+2023-11-07 19:30:47,369 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,370 INFO: Calculated stock price after 1 years: 173.54791080769013
+2023-11-07 19:30:47,370 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,371 INFO: Calculated stock price after 1 years: 223.58116942859337
+2023-11-07 19:30:47,371 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,371 INFO: Calculated stock price after 1 years: 203.3464395548804
+2023-11-07 19:30:47,371 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,372 INFO: Calculated stock price after 1 years: 358.23790492977514
+2023-11-07 19:30:47,372 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,373 INFO: Calculated stock price after 1 years: 190.17880583771142
+2023-11-07 19:30:47,373 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,373 INFO: Calculated stock price after 1 years: 205.94838402408305
+2023-11-07 19:30:47,373 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,374 INFO: Calculated stock price after 1 years: 172.97362796079162
+2023-11-07 19:30:47,374 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,375 INFO: Calculated stock price after 1 years: 162.1259255958108
+2023-11-07 19:30:47,375 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,376 INFO: Calculated stock price after 1 years: 204.65822832466074
+2023-11-07 19:30:47,376 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,377 INFO: Calculated stock price after 1 years: 264.7859068898673
+2023-11-07 19:30:47,377 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,378 INFO: Calculated stock price after 1 years: 148.27263776592824
+2023-11-07 19:30:47,378 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,378 INFO: Calculated stock price after 1 years: 134.14880443968036
+2023-11-07 19:30:47,378 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,379 INFO: Calculated stock price after 1 years: 112.41641332677347
+2023-11-07 19:30:47,379 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,380 INFO: Calculated stock price after 1 years: 142.37085675518833
+2023-11-07 19:30:47,380 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,381 INFO: Calculated stock price after 1 years: 137.5529717152216
+2023-11-07 19:30:47,381 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,381 INFO: Calculated stock price after 1 years: 129.43720444666988
+2023-11-07 19:30:47,381 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,382 INFO: Calculated stock price after 1 years: 178.3155769425762
+2023-11-07 19:30:47,382 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,383 INFO: Calculated stock price after 1 years: 200.04102198937545
+2023-11-07 19:30:47,383 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,383 INFO: Calculated stock price after 1 years: 166.194146759142
+2023-11-07 19:30:47,383 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,384 INFO: Calculated stock price after 1 years: 193.41228010168092
+2023-11-07 19:30:47,384 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,385 INFO: Calculated stock price after 1 years: 122.01661144275172
+2023-11-07 19:30:47,385 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,385 INFO: Calculated stock price after 1 years: 207.76772731491394
+2023-11-07 19:30:47,385 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,386 INFO: Calculated stock price after 1 years: 222.18546733516814
+2023-11-07 19:30:47,386 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,387 INFO: Calculated stock price after 1 years: 127.79971120945956
+2023-11-07 19:30:47,387 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,387 INFO: Calculated stock price after 1 years: 156.01897151430813
+2023-11-07 19:30:47,387 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,388 INFO: Calculated stock price after 1 years: 210.96850762352437
+2023-11-07 19:30:47,388 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,389 INFO: Calculated stock price after 1 years: 184.51121608918822
+2023-11-07 19:30:47,389 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,390 INFO: Calculated stock price after 1 years: 284.83576299996326
+2023-11-07 19:30:47,390 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,390 INFO: Calculated stock price after 1 years: 383.75971046012563
+2023-11-07 19:30:47,390 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,391 INFO: Calculated stock price after 1 years: 178.04412428722046
+2023-11-07 19:30:47,391 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,392 INFO: Calculated stock price after 1 years: 159.52948009086558
+2023-11-07 19:30:47,392 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,393 INFO: Calculated stock price after 1 years: 257.3506033556542
+2023-11-07 19:30:47,393 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,393 INFO: Calculated stock price after 1 years: 183.3973379757497
+2023-11-07 19:30:47,393 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,394 INFO: Calculated stock price after 1 years: 169.11264307248504
+2023-11-07 19:30:47,394 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,395 INFO: Calculated stock price after 1 years: 123.52799863370127
+2023-11-07 19:30:47,395 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,395 INFO: Calculated stock price after 1 years: 189.6640928530696
+2023-11-07 19:30:47,395 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,396 INFO: Calculated stock price after 1 years: 163.31656000911647
+2023-11-07 19:30:47,396 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,397 INFO: Calculated stock price after 1 years: 117.81119595780427
+2023-11-07 19:30:47,397 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,397 INFO: Calculated stock price after 1 years: 232.44113103729134
+2023-11-07 19:30:47,397 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,398 INFO: Calculated stock price after 1 years: 212.27955381014513
+2023-11-07 19:30:47,398 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,399 INFO: Calculated stock price after 1 years: 277.5457741047279
+2023-11-07 19:30:47,399 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,399 INFO: Calculated stock price after 1 years: 80.02117703879563
+2023-11-07 19:30:47,399 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,400 INFO: Calculated stock price after 1 years: 291.2811933520587
+2023-11-07 19:30:47,400 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,401 INFO: Calculated stock price after 1 years: 258.1724879954945
+2023-11-07 19:30:47,401 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,402 INFO: Calculated stock price after 1 years: 275.5335845472074
+2023-11-07 19:30:47,402 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,402 INFO: Calculated stock price after 1 years: 164.4691889182793
+2023-11-07 19:30:47,402 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,403 INFO: Calculated stock price after 1 years: 203.8399471756231
+2023-11-07 19:30:47,403 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,404 INFO: Calculated stock price after 1 years: 145.65829206636923
+2023-11-07 19:30:47,404 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,404 INFO: Calculated stock price after 1 years: 258.64320335244804
+2023-11-07 19:30:47,404 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,405 INFO: Calculated stock price after 1 years: 150.53352436639636
+2023-11-07 19:30:47,405 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,406 INFO: Calculated stock price after 1 years: 103.6235454247326
+2023-11-07 19:30:47,406 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,406 INFO: Calculated stock price after 1 years: 190.67733239920054
+2023-11-07 19:30:47,406 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,407 INFO: Calculated stock price after 1 years: 294.90715835915705
+2023-11-07 19:30:47,407 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,408 INFO: Calculated stock price after 1 years: 148.5843850164972
+2023-11-07 19:30:47,408 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,409 INFO: Calculated stock price after 1 years: 167.42100535877563
+2023-11-07 19:30:47,409 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,409 INFO: Calculated stock price after 1 years: 146.60086948147134
+2023-11-07 19:30:47,409 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,410 INFO: Calculated stock price after 1 years: 204.94915905952843
+2023-11-07 19:30:47,410 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,411 INFO: Calculated stock price after 1 years: 164.89032280361013
+2023-11-07 19:30:47,411 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,411 INFO: Calculated stock price after 1 years: 129.64431701842574
+2023-11-07 19:30:47,411 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,412 INFO: Calculated stock price after 1 years: 308.44597189362224
+2023-11-07 19:30:47,412 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,413 INFO: Calculated stock price after 1 years: 125.77659521104538
+2023-11-07 19:30:47,413 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,413 INFO: Calculated stock price after 1 years: 175.7838523086062
+2023-11-07 19:30:47,414 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,414 INFO: Calculated stock price after 1 years: 108.88863793812153
+2023-11-07 19:30:47,414 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,415 INFO: Calculated stock price after 1 years: 225.46504004190692
+2023-11-07 19:30:47,415 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,416 INFO: Calculated stock price after 1 years: 200.44825888635793
+2023-11-07 19:30:47,416 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,416 INFO: Calculated stock price after 1 years: 240.60917672400086
+2023-11-07 19:30:47,416 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,417 INFO: Calculated stock price after 1 years: 233.77764345121943
+2023-11-07 19:30:47,417 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,418 INFO: Calculated stock price after 1 years: 234.86293551243566
+2023-11-07 19:30:47,418 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,418 INFO: Calculated stock price after 1 years: 187.21458496776577
+2023-11-07 19:30:47,418 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,419 INFO: Calculated stock price after 1 years: 160.41426754398253
+2023-11-07 19:30:47,419 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,420 INFO: Calculated stock price after 1 years: 150.60590373397693
+2023-11-07 19:30:47,420 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,420 INFO: Calculated stock price after 1 years: 132.2059929756348
+2023-11-07 19:30:47,420 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,421 INFO: Calculated stock price after 1 years: 142.72738454571981
+2023-11-07 19:30:47,421 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,422 INFO: Calculated stock price after 1 years: 122.72568295357367
+2023-11-07 19:30:47,422 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,422 INFO: Calculated stock price after 1 years: 175.84635861765003
+2023-11-07 19:30:47,422 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,423 INFO: Calculated stock price after 1 years: 259.0621578375302
+2023-11-07 19:30:47,423 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,424 INFO: Calculated stock price after 1 years: 224.69259725439937
+2023-11-07 19:30:47,424 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,425 INFO: Calculated stock price after 1 years: 229.43275332569854
+2023-11-07 19:30:47,425 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,426 INFO: Calculated stock price after 1 years: 221.96313532775676
+2023-11-07 19:30:47,426 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,426 INFO: Calculated stock price after 1 years: 160.22418728201436
+2023-11-07 19:30:47,426 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,427 INFO: Calculated stock price after 1 years: 102.42654447435477
+2023-11-07 19:30:47,427 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,428 INFO: Calculated stock price after 1 years: 141.4934233548265
+2023-11-07 19:30:47,428 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,428 INFO: Calculated stock price after 1 years: 138.84883203616067
+2023-11-07 19:30:47,428 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,429 INFO: Calculated stock price after 1 years: 183.27463686238664
+2023-11-07 19:30:47,429 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,430 INFO: Calculated stock price after 1 years: 233.6801453346186
+2023-11-07 19:30:47,430 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,430 INFO: Calculated stock price after 1 years: 237.95186786376163
+2023-11-07 19:30:47,431 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,431 INFO: Calculated stock price after 1 years: 159.9205540862707
+2023-11-07 19:30:47,431 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,432 INFO: Calculated stock price after 1 years: 135.37727679649888
+2023-11-07 19:30:47,432 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,433 INFO: Calculated stock price after 1 years: 203.121923941604
+2023-11-07 19:30:47,433 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,433 INFO: Calculated stock price after 1 years: 125.78128908585764
+2023-11-07 19:30:47,433 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,434 INFO: Calculated stock price after 1 years: 149.28393824623447
+2023-11-07 19:30:47,434 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,435 INFO: Calculated stock price after 1 years: 135.5618311550096
+2023-11-07 19:30:47,435 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,435 INFO: Calculated stock price after 1 years: 287.93011049182627
+2023-11-07 19:30:47,435 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,436 INFO: Calculated stock price after 1 years: 171.53788819898898
+2023-11-07 19:30:47,436 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,437 INFO: Calculated stock price after 1 years: 156.10124270862522
+2023-11-07 19:30:47,437 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,437 INFO: Calculated stock price after 1 years: 179.92253489128848
+2023-11-07 19:30:47,437 INFO: Initiating stock price simulation using the Monte Carlo model, with the following parameters: Time to maturity = 1, Underlying price at start = 175, Asset's historical return = 0.05, Volatility = 0.27114977420156783
+2023-11-07 19:30:47,438 INFO: Calculated stock price after 1 years: 137.38496442099833
+2023-11-07 19:30:47,438 INFO: Calculated option prices using MC method: Call = 25.117865602498508, Put = 18.3841317883687

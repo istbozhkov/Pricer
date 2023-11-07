@@ -61,15 +61,19 @@ class BlackScholes(Pricer):
         # Not using static methods here, because it is not necessary to calculate both call and put prices
         # upon instance creation - only one of them might be needed.
 
+    def calc_d(self):
+        d1 = ( 1 / (self.sigma*numpy.sqrt(self.time_to_mat)) ) * \
+             (numpy.log(self.underlying_price/self.strike_price) +
+              (self.interest_rate + (self.sigma**2)/2 )*self.time_to_mat)
+        d2 = d1 - self.sigma*numpy.sqrt(self.time_to_mat)
+        return d1, d2
+
     def calc_price_call(self):
         logging.info(f'Initiating calculation of Call option price using B-S method, with the following parameters: \
 Time to maturity = {self.time_to_mat}, Underlying price = {self.underlying_price}, Strike price = {self.strike_price}, \
 Interest rate = {self.interest_rate}, Volatility = {self.sigma}')
         N = norm.cdf    # Cumulative Distribution Function
-        d1 = ( 1 / (self.sigma*numpy.sqrt(self.time_to_mat)) ) * \
-             (numpy.log(self.underlying_price/self.strike_price) +
-              (self.interest_rate + (self.sigma**2)/2 )*self.time_to_mat)
-        d2 = d1 - self.sigma*numpy.sqrt(self.time_to_mat)
+        d1, d2 = self.calc_d()
         logging.debug(f'B-S calculated values: d1={d1}, d2={d2}')
         # Black-Scholes formula explanation:
         # Simplified:
@@ -87,10 +91,7 @@ Interest rate = {self.interest_rate}, Volatility = {self.sigma}')
 Time to maturity = {self.time_to_mat}, Underlying price = {self.underlying_price}, Strike price = {self.strike_price}, \
 Interest rate = {self.interest_rate}, Volatility = {self.sigma}')
         N = norm.cdf    # Cumulative Distribution Function
-        d1 = ( 1 / (self.sigma*numpy.sqrt(self.time_to_mat)) ) * \
-             (numpy.log(self.underlying_price/self.strike_price) +
-              (self.interest_rate + (self.sigma**2)/2 )*self.time_to_mat)
-        d2 = d1 - self.sigma*numpy.sqrt(self.time_to_mat)
+        d1, d2 = self.calc_d()
         logging.debug(f'B-S calculated values: d1={d1}, d2={d2}')
         # The put option formula is derived from the
         # "put-call parity" expression, which is outside the scope of this project
