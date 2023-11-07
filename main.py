@@ -1,7 +1,5 @@
 import pricer_classes
 
-
-
 # Sample price history
 price_hist = [150, 153.07, 154.94, 155.86, 156.82, 153.3, 159.92,
               152.70, 157.76, 156.30, 154.68, 165.25, 166.44, 166.52,
@@ -45,7 +43,7 @@ apple_price_hist_2 = [177.970001, 179.070007, 175.490005, 173.929993, 174.789993
                       173.75, 172.40, 173.66, 175.01]
 
 
-# Sample values:
+# Sample values for B-S:
 t = 1     # in years
 S = 174.9   # Underlying price USD
 K = 190     # Strike price USD
@@ -66,7 +64,7 @@ p0 = 175
 mu = 0.05
 step = 252
 t = 1
-n=100
+n = 100
 
 apple_MC = pricer_classes.MonteCarlo(time_to_mat=t, underlying_price=p0, strike_price=180,
                                      stock_price_hist=apple_price_hist, mu=mu)
@@ -74,4 +72,3 @@ apple_MC = pricer_classes.MonteCarlo(time_to_mat=t, underlying_price=p0, strike_
 apple_MC.option_price_mc(n=n)
 print(f"MC calculated prices with {n} iterations: call = {apple_MC.call_price}, put = {apple_MC.put_price}")
 
-# print(option_price_mc(p0, mu, sigma, step, t, 100, 180))
