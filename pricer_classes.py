@@ -26,6 +26,7 @@ class Pricer:
         self.time_to_mat = time_to_mat
         self.underlying_price = underlying_price
         self.strike_price = strike_price
+        self.calculate = None   # this will be the calculate function from the child class.
         self.sigma = self.calc_volatility_log(stock_price_hist)
         # Using a static method to calculate the annualized volatility based on the stock price history.
         # The advantage of this is that the volatility will be calculated automatically when an instance is created
@@ -51,11 +52,36 @@ class Pricer:
         logging.info(f'Calculated annualized volatility (1) = {annualized_volat}')
         return annualized_volat
 
+    def plot(self, step=None, k_min=None, k_max=None, t_min=1/12, t_max=2):
+        if k_min and k_min < 0:
+            raise ValueError("Strike price cannot be negative!")
+        elif k_min == None:
+            k_min = round((self.underlying_price - 0)/2) # Default min value is half the underlying price
+        if k_max and k_max < k_min:
+            raise ValueError("Max value cannot be less than the min value!")
+        elif k_max == None:
+            k_max = round(self.underlying_price * 2) # Default max value is double the underlying price
+        if t_min <= 0:
+            raise ValueError("Time to maturity cannot be zero or negative!")
+        if t_max < t_min:
+            raise ValueError("Max time to maturity cannot be less than the min value!")
+        if step and step <= 0:
+            raise ValueError("Number of steps must be more than 0")
+        elif step and not isinstance(step, int):
+            raise ValueError("Number of steps must be more an integer")
+        elif step == None:
+            step = int((k_max - k_min)/10)
+
+        for i in range(k_min, k_max, step):
+            self.strike_price = i
+            self.calculate()
+
 
 class BlackScholes(Pricer):
     def __init__(self, time_to_mat, underlying_price, strike_price, stock_price_hist: list, interest_rate):
         super().__init__(time_to_mat, underlying_price, strike_price, stock_price_hist)
         self.interest_rate = interest_rate
+        self.calculate = self.calculate_both
         self.price_call = None
         self.price_put = None
         # Not using static methods here, because it is not necessary to calculate both call and put prices
@@ -99,6 +125,11 @@ Interest rate = {self.interest_rate}, Volatility = {self.sigma}')
         self.price_put = N(-d2) * self.strike_price * numpy.exp(-self.interest_rate * self.time_to_mat) \
                     - N(-d1) * self.underlying_price
         logging.info(f'B-S calculated Call option price = {self.price_put}')
+
+    def calculate_both(self):
+        """for the purposes of the plot() function in the super class."""
+        self.calc_price_call()
+        self.calc_price_put()
 
 
 class MonteCarlo(Pricer):
@@ -194,3 +225,4 @@ Asset\'s historical return = {self.mu}, Volatility = {self.sigma}')
         self.call_price = numpy.mean(simulated_call_payoffs)
         self.put_price = numpy.mean(simulated_put_payoffs)
         logging.info(f'Calculated option prices using MC method: Call = {self.call_price}, Put = {self.put_price}')
+

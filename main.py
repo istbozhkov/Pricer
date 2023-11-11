@@ -53,11 +53,13 @@ r = 0.05
 apple_BS = pricer_classes.BlackScholes(time_to_mat=t, underlying_price=S, strike_price=K,
                                        stock_price_hist=apple_price_hist, interest_rate=r)
 
-for K in range(140,191,5):
-    apple_BS.strike_price = K
-    apple_BS.calc_price_call()
-    apple_BS.calc_price_put()
-    print(f"K={K}, call: S={apple_BS.price_call}, put: S={apple_BS.price_put}")
+# for K in range(140,191,5):
+#     apple_BS.strike_price = K
+#     apple_BS.calc_price_call()
+#     apple_BS.calc_price_put()
+#     print(f"K={K}, call: S={apple_BS.price_call}, put: S={apple_BS.price_put}")
+
+apple_BS.plot()
 
 # Sample values for MC:
 p0 = 175
@@ -69,6 +71,6 @@ n = 100
 apple_MC = pricer_classes.MonteCarlo(time_to_mat=t, underlying_price=p0, strike_price=180,
                                      stock_price_hist=apple_price_hist, mu=mu)
 
-apple_MC.option_price_mc(n=n)
-print(f"MC calculated prices with {n} iterations: call = {apple_MC.call_price}, put = {apple_MC.put_price}")
+# apple_MC.option_price_mc(n=n)
+# print(f"MC calculated prices with {n} iterations: call = {apple_MC.call_price}, put = {apple_MC.put_price}")
 
