@@ -4169,3 +4169,73 @@
 2023-11-11 23:28:11,667 INFO: B-S calculated Call option price = 155.38563502094408
 2023-11-11 23:28:11,667 DEBUG: Initiating calculation of volatility
 2023-11-11 23:28:11,667 INFO: Calculated annualized volatility (1) = 0.27114977420156783
+2023-11-12 23:08:12,064 DEBUG: Initiating calculation of volatility
+2023-11-12 23:08:12,065 INFO: Calculated annualized volatility (1) = 0.27114977420156783
+2023-11-12 23:08:12,065 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 87, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,065 DEBUG: B-S calculated values: d1=2.8953273728752897, d2=2.6241775986737217
+2023-11-12 23:08:12,065 INFO: B-S calculated Call option price = 92.17121876024345
+2023-11-12 23:08:12,066 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 87, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,066 DEBUG: B-S calculated values: d1=2.8953273728752897, d2=2.6241775986737217
+2023-11-12 23:08:12,066 INFO: B-S calculated Call option price = 0.0281786918055682
+2023-11-12 23:08:12,066 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 113, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,066 DEBUG: B-S calculated values: d1=1.9309905932201548, d2=1.659840819018587
+2023-11-12 23:08:12,066 INFO: B-S calculated Call option price = 67.94421680416431
+2023-11-12 23:08:12,066 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 113, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,066 DEBUG: B-S calculated values: d1=1.9309905932201548, d2=1.659840819018587
+2023-11-12 23:08:12,067 INFO: B-S calculated Call option price = 0.5331417727450036
+2023-11-12 23:08:12,067 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 139, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,067 DEBUG: B-S calculated values: d1=1.1672572837304438, d2=0.896107509528876
+2023-11-12 23:08:12,067 INFO: B-S calculated Call option price = 45.893227112146576
+2023-11-12 23:08:12,067 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 139, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,067 DEBUG: B-S calculated values: d1=1.1672572837304438, d2=0.896107509528876
+2023-11-12 23:08:12,068 INFO: B-S calculated Call option price = 3.2141171177458148
+2023-11-12 23:08:12,068 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 165, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,068 DEBUG: B-S calculated values: d1=0.5348704736185536, d2=0.2637206994169857
+2023-11-12 23:08:12,068 INFO: B-S calculated Call option price = 28.265031611840485
+2023-11-12 23:08:12,068 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 165, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,068 DEBUG: B-S calculated values: d1=0.5348704736185536, d2=0.2637206994169857
+2023-11-12 23:08:12,068 INFO: B-S calculated Call option price = 10.317886654458292
+2023-11-12 23:08:12,068 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 191, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,068 DEBUG: B-S calculated values: d1=-0.004786823080029712, d2=-0.27593659728159753
+2023-11-12 23:08:12,069 INFO: B-S calculated Call option price = 16.023024527721702
+2023-11-12 23:08:12,069 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 191, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,069 DEBUG: B-S calculated values: d1=-0.004786823080029712, d2=-0.27593659728159753
+2023-11-12 23:08:12,069 INFO: B-S calculated Call option price = 22.807844607358064
+2023-11-12 23:08:12,069 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 217, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,070 DEBUG: B-S calculated values: d1=-0.47546368744266154, d2=-0.7466134616442294
+2023-11-12 23:08:12,070 INFO: B-S calculated Call option price = 8.49275849602877
+2023-11-12 23:08:12,070 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 217, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,070 DEBUG: B-S calculated values: d1=-0.47546368744266154, d2=-0.7466134616442294
+2023-11-12 23:08:12,070 INFO: B-S calculated Call option price = 40.009543612683686
+2023-11-12 23:08:12,070 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 243, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,070 DEBUG: B-S calculated values: d1=-0.8928126973517195, d2=-1.1639624715532872
+2023-11-12 23:08:12,071 INFO: B-S calculated Call option price = 4.276771930859361
+2023-11-12 23:08:12,071 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 243, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,071 DEBUG: B-S calculated values: d1=-0.8928126973517195, d2=-1.1639624715532872
+2023-11-12 23:08:12,071 INFO: B-S calculated Call option price = 60.52552208453287
+2023-11-12 23:08:12,071 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 269, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,071 DEBUG: B-S calculated values: d1=-1.2676975246048892, d2=-1.538847298806457
+2023-11-12 23:08:12,071 INFO: B-S calculated Call option price = 2.0746927629843785
+2023-11-12 23:08:12,071 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 269, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,072 DEBUG: B-S calculated values: d1=-1.2676975246048892, d2=-1.538847298806457
+2023-11-12 23:08:12,072 INFO: B-S calculated Call option price = 83.05540795367642
+2023-11-12 23:08:12,072 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 295, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,072 DEBUG: B-S calculated values: d1=-1.6079669458487857, d2=-1.8791167200503536
+2023-11-12 23:08:12,072 INFO: B-S calculated Call option price = 0.9803709899064632
+2023-11-12 23:08:12,072 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 295, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,072 DEBUG: B-S calculated values: d1=-1.6079669458487857, d2=-1.8791167200503536
+2023-11-12 23:08:12,073 INFO: B-S calculated Call option price = 106.6930512176171
+2023-11-12 23:08:12,073 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 321, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,073 DEBUG: B-S calculated values: d1=-1.9194765793674393, d2=-2.190626353569007
+2023-11-12 23:08:12,073 INFO: B-S calculated Call option price = 0.4551769319071246
+2023-11-12 23:08:12,073 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 321, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,073 DEBUG: B-S calculated values: d1=-1.9194765793674393, d2=-2.190626353569007
+2023-11-12 23:08:12,073 INFO: B-S calculated Call option price = 130.89982219663634
+2023-11-12 23:08:12,073 INFO: Initiating calculation of Call option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 347, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,074 DEBUG: B-S calculated values: d1=-2.206711400219423, d2=-2.4778611744209904
+2023-11-12 23:08:12,074 INFO: B-S calculated Call option price = 0.20902471919632104
+2023-11-12 23:08:12,074 INFO: Initiating calculation of Put option price using B-S method, with the following parameters: Time to maturity = 1, Underlying price = 174.9, Strike price = 347, Interest rate = 0.05, Volatility = 0.27114977420156783
+2023-11-12 23:08:12,074 DEBUG: B-S calculated values: d1=-2.206711400219423, d2=-2.4778611744209904
+2023-11-12 23:08:12,074 INFO: B-S calculated Call option price = 155.38563502094408
+2023-11-12 23:08:12,074 DEBUG: Initiating calculation of volatility
+2023-11-12 23:08:12,075 INFO: Calculated annualized volatility (1) = 0.27114977420156783

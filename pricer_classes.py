@@ -1,6 +1,7 @@
 import numpy
 import logging
 from scipy.stats import norm
+import matplotlib.pyplot as plt
 
 logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', filename='default.log', encoding='utf-8', level=logging.DEBUG)
 
@@ -52,25 +53,33 @@ class Pricer:
         logging.info(f'Calculated annualized volatility (1) = {annualized_volat}')
         return annualized_volat
 
-    def plot(self, step=None, k_min=None, k_max=None, t_min=1/12, t_max=2):
-        if k_min and k_min < 0:
-            raise ValueError("Strike price cannot be negative!")
-        elif k_min == None:
+    def plot(self, step="default", k_min="default", k_max="default", t_min=1/12, t_max=2):
+        if k_min == "default":
             k_min = round((self.underlying_price - 0)/2) # Default min value is half the underlying price
-        if k_max and k_max < k_min:
-            raise ValueError("Max value cannot be less than the min value!")
-        elif k_max == None:
+        elif isinstance(k_min, int):
+            raise ValueError("Min strike price must be more an integer")
+        elif k_min < 0:
+            raise ValueError("Strike price cannot be negative!")
+        if k_max == "default":
             k_max = round(self.underlying_price * 2) # Default max value is double the underlying price
+        elif isinstance(k_max, int):
+            raise ValueError("Max strike price must be more an integer")
+        elif k_max < k_min:
+            raise ValueError("Max value cannot be less than the min value!")
+        if not (isinstance(t_min, float) or isinstance(t_min, int)):
+            raise ValueError("Min time must be more a number")
+        if not (isinstance(t_max, float) or isinstance(t_max, int)):
+            raise ValueError("Max time must be more a number")
         if t_min <= 0:
             raise ValueError("Time to maturity cannot be zero or negative!")
         if t_max < t_min:
             raise ValueError("Max time to maturity cannot be less than the min value!")
-        if step and step <= 0:
+        if step == "default":
+            step = int((k_max - k_min)/10)
+        elif step and step <= 0:
             raise ValueError("Number of steps must be more than 0")
         elif step and not isinstance(step, int):
             raise ValueError("Number of steps must be more an integer")
-        elif step == None:
-            step = int((k_max - k_min)/10)
 
         for i in range(k_min, k_max, step):
             self.strike_price = i
