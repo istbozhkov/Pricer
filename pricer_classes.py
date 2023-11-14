@@ -27,7 +27,7 @@ class Pricer:
         self.time_to_mat = time_to_mat
         self.underlying_price = underlying_price
         self.strike_price = strike_price
-        self.calculate = None   # this will be the calculate function from the child class.
+        # self.calculate = None   # this will be the calculate function from the child class.
         self.sigma = self.calc_volatility_log(stock_price_hist)
         # Using a static method to calculate the annualized volatility based on the stock price history.
         # The advantage of this is that the volatility will be calculated automatically when an instance is created
@@ -81,9 +81,25 @@ class Pricer:
         elif step and not isinstance(step, int):
             raise ValueError("Number of steps must be more an integer")
 
-        for i in range(k_min, k_max, step):
-            self.strike_price = i
-            self.calculate()
+        def option_price(k, t):
+            self.strike_price = k
+            self.time_to_mat = t
+            return self.calculate()
+
+        fig = plt.figure()
+        ax = fig.add_subplot(projection='3d')
+        k_range = numpy.arange(140, 200, 5)
+        t_range = numpy.arange(0.5, 1.5, 0.1)
+        X, Y = numpy.meshgrid(k_range, t_range)
+        Z = option_price(X, Y)
+
+        # Plot the surface.
+        surf = ax.plot_surface(X, Y, Z, cmap=plt.cm.coolwarm, linewidth=0, antialiased=False)
+
+        ax.set_zlim(0, max(Z[0]))
+
+        plt.show()
+
 
 
 class BlackScholes(Pricer):
@@ -138,7 +154,8 @@ Interest rate = {self.interest_rate}, Volatility = {self.sigma}')
     def calculate_both(self):
         """for the purposes of the plot() function in the super class."""
         self.calc_price_call()
-        self.calc_price_put()
+        return self.price_call
+        # self.calc_price_put()     # commenting to try plotting with call only
 
 
 class MonteCarlo(Pricer):
