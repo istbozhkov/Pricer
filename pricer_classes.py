@@ -27,7 +27,7 @@ class Pricer:
         self.time_to_mat = time_to_mat
         self.underlying_price = underlying_price
         self.strike_price = strike_price
-        # self.calculate = None   # this will be the calculate function from the child class.
+        self.calculate = None   # this will be the calculate function from the child class.
         self.sigma = self.calc_volatility_log(stock_price_hist)
         # Using a static method to calculate the annualized volatility based on the stock price history.
         # The advantage of this is that the volatility will be calculated automatically when an instance is created
