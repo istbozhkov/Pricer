@@ -84,22 +84,26 @@ class Pricer:
         def option_price(k, t):
             self.strike_price = k
             self.time_to_mat = t
-            return self.calculate()
+            return self.calculate()  # returning a tuple: call, put
 
-        fig = plt.figure()
-        ax = fig.add_subplot(projection='3d')
+        fig1 = plt.figure()
+        fig2 = plt.figure()
+        ax = fig1.add_subplot(projection='3d')
+        ax2 = fig2.add_subplot(projection='3d')
         k_range = numpy.arange(140, 200, 5)
         t_range = numpy.arange(0.5, 1.5, 0.1)
         X, Y = numpy.meshgrid(k_range, t_range)
-        Z = option_price(X, Y)
+        Z_call = option_price(X, Y)[0]
+        Z_put = option_price(X, Y)[1]
+
+        surf = ax.plot_surface(X, Y, Z_call, cmap=plt.cm.coolwarm, linewidth=0, antialiased=False)
+        surf2 = ax2.plot_surface(X, Y, Z_put, cmap=plt.cm.coolwarm, linewidth=0, antialiased=False)
+
+        ax.set_zlim(0, max(Z_call[0]))
+        ax2.set_zlim(0, max(Z_put[0]))
 
         # Plot the surface.
-        surf = ax.plot_surface(X, Y, Z, cmap=plt.cm.coolwarm, linewidth=0, antialiased=False)
-
-        ax.set_zlim(0, max(Z[0]))
-
         plt.show()
-
 
 
 class BlackScholes(Pricer):
@@ -154,8 +158,8 @@ Interest rate = {self.interest_rate}, Volatility = {self.sigma}')
     def calculate_both(self):
         """for the purposes of the plot() function in the super class."""
         self.calc_price_call()
-        return self.price_call
-        # self.calc_price_put()     # commenting to try plotting with call only
+        self.calc_price_put()
+        return self.price_call, self.price_put
 
 
 class MonteCarlo(Pricer):
