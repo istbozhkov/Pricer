@@ -69,8 +69,9 @@ t = 1
 n = 100
 
 apple_MC = pricer_classes.MonteCarlo(time_to_mat=t, underlying_price=p0, strike_price=180,
-                                     stock_price_hist=apple_price_hist, mu=mu)
+                                     stock_price_hist=apple_price_hist, mu=mu, n=n)
 
 # apple_MC.option_price_mc(n=n)
+apple_MC.plot()
 # print(f"MC calculated prices with {n} iterations: call = {apple_MC.call_price}, put = {apple_MC.put_price}")
 

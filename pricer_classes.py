@@ -93,8 +93,8 @@ class Pricer:
         k_range = numpy.arange(140, 200, 5)
         t_range = numpy.arange(0.5, 1.5, 0.1)
         X, Y = numpy.meshgrid(k_range, t_range)
-        Z_call = option_price(X, Y)[0]
-        Z_put = option_price(X, Y)[1]
+        Z_call, Z_put = option_price(X, Y)
+        # Z_put = option_price(X, Y)[1]
 
         surf = ax.plot_surface(X, Y, Z_call, cmap=plt.cm.coolwarm, linewidth=0, antialiased=False)
         surf2 = ax2.plot_surface(X, Y, Z_put, cmap=plt.cm.coolwarm, linewidth=0, antialiased=False)
@@ -192,9 +192,11 @@ class MonteCarlo(Pricer):
 
     # price_t = price_0*numpy.exp(((mu-(volat**2)/2)*dt)+(volat*numpy.sqrt(dt)*z))
 
-    def __init__(self, time_to_mat, underlying_price, strike_price, stock_price_hist: list, mu):
+    def __init__(self, time_to_mat, underlying_price, strike_price, stock_price_hist: list, mu, n):
         super().__init__(time_to_mat, underlying_price, strike_price, stock_price_hist)
         self.mu = mu
+        self.n = n
+        self.calculate = self._calc_for_plot
         self.price_hist = None
         self.sim_price = None
         self.call_price = None
@@ -217,7 +219,7 @@ Asset\'s historical return = {self.mu}, Volatility = {self.sigma}')
         # pre-calculating all z values in the following array
         # simple testing showed reduction of ~10% in processing time compared to
         # calculating z value every iteration.
-        steps = self.time_to_mat * 252  # turning years into work days
+        steps = round(self.time_to_mat * 252)  # turning years into work days
         z_array = numpy.random.normal(size=steps)
         dt = self.time_to_mat/steps
         price_t = self.underlying_price*numpy.exp(((self.mu-(self.sigma**2)/2)*dt)+(self.sigma*numpy.sqrt(dt)*z_array[0]))
@@ -233,18 +235,18 @@ Asset\'s historical return = {self.mu}, Volatility = {self.sigma}')
     # Put option payoff is calculated as: Strike price - Spot price
     # Payoff cannot be negative.
 
-    def option_price_mc(self, n):
+    def option_price_mc(self):
         """Calculate option price for given parameters
         n - number of iterations for simulation to run
         Simulate n trajectories and calculate payoff for each.
         Return averaged payoff"""
-        logging.debug(f'Starting Option price calculation from MC simulated prices with {n} simulations')
+        logging.debug(f'Starting Option price calculation from MC simulated prices with {self.n} simulations')
         # Initializing empty numpy arrays:
-        simulated_strike_prices = numpy.empty(n)
-        simulated_call_payoffs = numpy.empty(n)
-        simulated_put_payoffs = numpy.empty(n)
+        simulated_strike_prices = numpy.empty(self.n)
+        simulated_call_payoffs = numpy.empty(self.n)
+        simulated_put_payoffs = numpy.empty(self.n)
 
-        for i in range(n):
+        for i in range(self.n):
             self.calc_mc()
             simulated_strike_prices[i] = self.sim_price
             # Currently not used. Keeping for future use for plots
@@ -256,3 +258,25 @@ Asset\'s historical return = {self.mu}, Volatility = {self.sigma}')
         self.put_price = numpy.mean(simulated_put_payoffs)
         logging.info(f'Calculated option prices using MC method: Call = {self.call_price}, Put = {self.put_price}')
 
+    def _calc_for_plot(self):
+        # This function is different than calculate_both in the B-S class, because
+        # the MC calc functions are more complex and cannot simply be fed 2d arrays.
+        # Thus, the 2d arrays are iterated over and each value is individually fed
+        # to the calc function above. Then a new 2D array containing the option prices
+        # is constructed.
+        strike_price_array = self.strike_price
+        time_to_mat_array = self.time_to_mat
+        call_price_2d_array = numpy.empty([len(strike_price_array),len(time_to_mat_array[0])])
+        put_price_2d_array = numpy.empty([len(strike_price_array),len(time_to_mat_array[0])])
+
+        for i in range(len(time_to_mat_array)):
+            self.time_to_mat = time_to_mat_array[i][0]    # assuming all elements in inner arrays are the same
+            for j in range(len(strike_price_array[0])):
+                self.strike_price = strike_price_array[0][j]
+                self.option_price_mc()
+                call_price_2d_array[i][j] = self.call_price
+                put_price_2d_array[i][j] = self.put_price
+        print(strike_price_array)
+        print(time_to_mat_array)
+        print(call_price_2d_array)
+        return call_price_2d_array, put_price_2d_array
