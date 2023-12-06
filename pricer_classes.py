@@ -43,9 +43,7 @@ class Pricer:
         log_returns = [numpy.log(stock_price_hist[i] / stock_price_hist[i - 1])
                        for i in range(1, len(stock_price_hist))]
 
-        # print(f"log_returns: {log_returns}")
         daily_volat = numpy.std(log_returns)
-        # print(f"daily volatility: {daily_volat}")
         annualized_volat = numpy.sqrt(252)*daily_volat  # 252 is no. of trading days in a year
         an_volat_percent = 100 * annualized_volat
         # No need to divide by the mean because annualized_volat is already
@@ -250,7 +248,6 @@ Asset\'s historical return = {self.mu}, Volatility = {self.sigma}')
             self.calc_mc()
             simulated_strike_prices[i] = self.sim_price
             # Currently not used. Keeping for future use for plots
-            # print(simulated_strike_prices)
             simulated_call_payoffs[i] = max(self.sim_price - self.strike_price, 0)
             simulated_put_payoffs[i] = max(self.strike_price - self.sim_price, 0)
 
@@ -276,7 +273,4 @@ Asset\'s historical return = {self.mu}, Volatility = {self.sigma}')
                 self.option_price_mc()
                 call_price_2d_array[i][j] = self.call_price
                 put_price_2d_array[i][j] = self.put_price
-        print(strike_price_array)
-        print(time_to_mat_array)
-        print(call_price_2d_array)
         return call_price_2d_array, put_price_2d_array
