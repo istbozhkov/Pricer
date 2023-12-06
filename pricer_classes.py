@@ -34,7 +34,15 @@ class Pricer:
         # rather than having to call the method later on.
 
     @staticmethod
-    def calc_volatility_log(stock_price_hist):
+    def calc_volatility_log(stock_price_hist: list):
+        """Calculates volatility using logarithmic returns.
+
+        Args:
+          stock_price_hist: A list containing the stock price history
+
+        Returns:
+          Annualized volatility
+        """
         # Using logarithmic returns
         # Log returns are a way of measuring the percentage change over time
         # https://www.macroption.com/historical-volatility-calculation/
@@ -52,6 +60,18 @@ class Pricer:
         return annualized_volat
 
     def plot(self, step="default", k_min="default", k_max="default", t_min=1/12, t_max=2):
+        """Creates a 3D plot of the option price with varying strike price and time to maturity.
+
+        Args:
+          step: plot resolution - Currently unused.
+          k_min: Lower end of strike price range.
+          k_max: Upper end of strike price range.
+          t_min: Lower end of time to maturity.
+          t_max: Upper end of time to maturity.
+
+        Raises:
+          ValueError: If input parameters are not valid.
+        """
         if k_min == "default":
             k_min = round((self.underlying_price - 0)/2) # Default min value is half the underlying price
         elif isinstance(k_min, int):
@@ -92,7 +112,6 @@ class Pricer:
         t_range = numpy.arange(0.5, 1.5, 0.1)
         X, Y = numpy.meshgrid(k_range, t_range)
         Z_call, Z_put = option_price(X, Y)
-        # Z_put = option_price(X, Y)[1]
 
         surf = ax.plot_surface(X, Y, Z_call, cmap=plt.cm.coolwarm, linewidth=0, antialiased=False)
         surf2 = ax2.plot_surface(X, Y, Z_put, cmap=plt.cm.coolwarm, linewidth=0, antialiased=False)
