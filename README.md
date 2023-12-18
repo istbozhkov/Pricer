@@ -1,4 +1,4 @@
-![image](https://github.com/istbozhkov/Pricer/assets/113388063/3095fb67-0c87-4eb1-9dbb-ba3cf6e350cc)# Options pricer
+# Options pricer
 
 Options pricer written on Python. It employs two different methods of calculating an option price: Black-Scholes and Monte Carlo option model.
 
