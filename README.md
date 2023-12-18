@@ -29,6 +29,7 @@ Run main.py to calculate option price for sample parameters for a sample stock (
 
 - Abiltiy to calculate call and put option prices with custom parameters (given above), using either Black-Scholes model or the Monte Carlo option model.
 - Ability to generate a 3D surface of the option price vs strike price vs time to maturity, e.g.
-![image](https://github.com/istbozhkov/Pricer/assets/113388063/42a64deb-5451-432c-a7f3-dac27165754b)
-![image](https://github.com/istbozhkov/Pricer/assets/113388063/10fde8d3-b1bd-486e-a1ed-379a20501019)
+
+![image](https://github.com/istbozhkov/Pricer/assets/113388063/934adefa-9ed4-49c4-ba47-1b44d343334a)
+![image](https://github.com/istbozhkov/Pricer/assets/113388063/7813e752-1fde-4797-9ec9-3deec3cc877f)
 
