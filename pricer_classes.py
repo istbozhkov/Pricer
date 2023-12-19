@@ -23,7 +23,19 @@ logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', filename='d
 
 
 class Pricer:
+    """A generic pricer class meant to be used only as a superclass and not instantiated."""
+
     def __init__(self, time_to_mat, underlying_price, strike_price, stock_price_hist: list):
+        """Initiating all generic attributes that are used by both Black-Shcoles and Monte Carlo.
+
+        Args:
+        time_to_mat (int, float): Time to maturity in years.
+        underlying_price (int, float): Price of the underlying asset at present time.
+        strike_price (int, float): Strike price of option at time of maturity
+        stock_price_hist (list): Stock price history where each element of the list
+            is a day's closing price. No restrictions on length.
+
+        """
         self.time_to_mat = time_to_mat
         self.underlying_price = underlying_price
         self.strike_price = strike_price
